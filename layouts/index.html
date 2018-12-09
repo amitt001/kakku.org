@@ -1,0 +1,46 @@
+{{ define "header" }}
+  {{ partial "header.html" . }}
+{{ end }}
+
+{{ define "content" }}
+    <code class="">
+        <span class=".item__title--small">
+            Hi There! I'm
+        </span>
+        <span class="item__title--big">
+          Amit Tripathi
+        </span>
+    </code>
+    <div class="portfolio__content">
+        <p>Software Engineer</p>
+    </div>
+    <hr>
+    <div class="portfolio__content">
+        <h3>Experience</h3>
+    </div>
+    <hr>
+    <div class="portfolio__content">
+        <h3>Projects</h3>
+    </div>
+    <hr>
+    <div class="portfolio__content">
+        <h3>Education</h3>
+    </div>
+    <hr>
+    <div class="portfolio__content">
+        <h3>Skills</h3>
+    </div>
+    <hr>
+    <div class="portfolio__content">
+        <h3>INTERESTS</h3>
+    </div>
+    <hr>
+{{ end }}
+
+{{ define "footer" }}
+  {{ if .Site.GoogleAnalytics }}
+    <!-- Google Analytics -->
+    {{ template "_internal/google_analytics_async.html" . }}
+  {{ end }}
+  {{ partial "footer/font-awesome-js.html" . }}
+{{ end }}
