@@ -21,6 +21,8 @@ paginate = 7
     copyright = "Amit"
     showBuiltWith = false
     mainSections = ["post"]
+    highlightjs = true
+    highlightjsstyle="dracula"
 
 [permalinks]
     posts = "/:year/:month/:slug/"

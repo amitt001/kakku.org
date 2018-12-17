@@ -3,6 +3,9 @@
 {{ end }}
 
 {{ define "content" }}
+
+<link rel="stylesheet" href="css/custom.css">
+
     <code class="">
         <span class=".item__title--small">
             Hi There! I'm
@@ -10,84 +13,194 @@
         <span class="item__title--big">
           Amit Tripathi
         </span>
+        <div class="project__subtitle-small">
+            <p>Software Engineer, Traveller, Mountaineer</p>
+        </div>
     </code>
-    <div class="portfolio__content">
-        <p>Software Engineer</p>
-    </div>
-    <hr class="divider">
 
     <div class="portfolio_content">
-        <h3>Experience</h3>
-        <hr class="divider">
-            <!-- First Block -->
-            <div class="row">
-                <div class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/amitt001/pygmy" target="_blank" rel="noopener noreferrer">
-                    <img class="project__image img-responsive" src="images/pygmy.png" alt="Pygmy">
+        <div>
+            <h3>Experience</h3>
+            <hr>
+            <div>
+                <div>
+                    <span class="left subtitle">Software Engineer</span>
+                    <span class="right sub_info_about">Apr, 2018 - Present</span>
                 </div>
-                <div class="col-md-8 col-sm-8 col-xs-12">
-                    <span class="project__title">
-                        <a href="https://github.com/amitt001/pygmy" target="_blank" rel="noopener noreferrer">Pygmy</a>
-                    </span>
-                    <span class="project__subtitle-small">
-                        URL shortener, link analytics & user dashboard
-                    </span>
-                    <span class="project__summary">
-                        <p>Open-source, feature rich and extensible url shortener. It's created keeping in mind that it should be easy to host and run your custom URL shortener. Checkout live version <a href="https://pygy.co/pygmy", target="_blank">pygy.co</a></p>
-                    </span>
-                </div>
+                <span>Takealot, <span class="sub_info_about">Cape Town(SA)</span></span>
+                <p class="detail_info_about">
+                    <ul class="detail_info_about">
+                        <li>Working in the warehouse data processing team</li>
+                    </ul>
+                </p>
             </div>
-            <!-- Second Block -->
-            <div class="row-space">&nbsp;</div>
-            <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/amitt001/Codebuddy" target="_blank" rel="noopener noreferrer">
-                        <img class="project__image img-responsive" src="images/codebuddy.png" alt="Pygmy">
+            <hr width="10%" style="border-top: dashed 1px #300030;">
+            <div>
+                <div>
+                    <span class="left subtitle">Software Engineer</span>
+                    <span class="right sub_info_about">Feb, 2017 - Apr, 2018</span>
+                </div>
+                <span>Wingify, <span class="sub_info_about">Delhi(IN)</span></span>
+                <p class="detail_info_about">
+                    <ul class="detail_info_about">
+                        <li>Created a micro-service to store customer action logs. Ported past data to Elasticsearch. Technology: Elasticsearch, Python, uwsgi</li>
+                        <li>Created a cron management framework that improved cron scheduling and management.</li>
+                        <li>Worked on the data consumers for consuming and processing the data from Kafka queues.</li>
+                        <li>Created payment gateway monitoring setup using stated, grafana.</li>
+                        <li>Worked on the Wingify’s product VWO and pricing platform backend.</li>
+                    </ul>
+                </p>
+            </div>
+            <hr width="10%" style="border-top: dashed 1px #300030;">
+            <div>
+                <div>
+                    <span class="left subtitle">Software Engineer<span class="sub_info_about">(Internship and full time)</span></span>
+                    <span class="right sub_info_about">Feb, 2016 - Jan, 2017</span>
+                </div>
+                <span>Innovaccer, <span class="sub_info_about">Noida(IN)</span></span>
+                <p class="detail_info_about">
+                    <ul class="detail_info_about">
+                        <li>Developed web app for remote R code execution. This product allows asynchronous code execution of R code.</li>
+                        <li>Worked on web backend of Data Quality Tool. Which helped analyse and clean millions of rows of data. Used HDFS as data storage backend.</li>
+                        <li>Developed REST API using Python Django framework and Scala Play framework.</li>
+                        <li>Automated website crawling and document parsing.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <div>
+            <h3>Projects</h3>
+            <hr style="margin-bottom: 2rem">
+                <!-- First Block -->
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/amitt001/pygmy" target="_blank" rel="noopener noreferrer">
+                        <img class="project__image img-responsive" src="images/pygmy.png" alt="Pygmy">
                     </div>
                     <div class="col-md-8 col-sm-8 col-xs-12">
                         <span class="project__title">
-                            <a href="https://github.com/amitt001/codebuddy" target="_blank" rel="noopener noreferrer">Codebuddy</a>
+                            <a href="https://github.com/amitt001/pygmy" target="_blank" rel="noopener noreferrer">Pygmy</a>
                         </span>
                         <span class="project__subtitle-small">
-                            Real time code and document editor
+                            Open-source URL shortener with link analytics & user dashboard
                         </span>
-                        <span class="project__summary">
-                            <p>It is a real time code and document collaboration web app. It can be used for real time collaboration. Checkout <a href="https://pygy.co/cC", target="_blank">Codebuddy</a></p>
+                        <div>
+                            <a class="github-button" href="https://github.com/amitt001/pygmy" data-icon="octicon-star" data-show-count="true" aria-label="Star amitt001/pygmy on GitHub">Star</a>
+                            <a class="github-button" href="https://github.com/amitt001/pygmy/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork amitt001/pygmy on GitHub">Fork</a>
+                        </div>
+                        <span class="project__summary detail_info_about">
+                            <p>Authored a famous open-source URL shortener web app. Live version: <a href="https://pygy.co/pygy", target="_blank">pygy.co</a>
+                            <ul>
+                                <li>URL shortener with custom links, time-based expiry and secret links</li>
+                                <li>Link analytics(by adding + to URL) like <u>country</u>, referrer and <u>datewise clicks</u></li>
+                                <li>User <u>dashboard</u>. User access through JWT token based authentication</li>
+                                <li>Supports MySQL, PostgreSQL and SQLite databases</li>
+                                <li><u>Docker</u> and <u>docker-compose</u> support</li>
+                                <li>Used Django for UI rendering, Flask for REST API on top of the core module, SQLAlchemy as ORM</li>
+                            </ul>
+                            </p>
                         </span>
                     </div>
                 </div>
-                <!-- Third block -->
+                <!-- Second Block -->
                 <div class="row-space">&nbsp;</div>
                 <div class="row">
-                        <div class="col-md-4 col-sm-4 col-xs-12" href="https://gitlab.com/mailman/mailman/merge_requests?scope=all&utf8=%E2%9C%93&state=all&author_username=amitt001" target="_blank" rel="noopener noreferrer">
-                            <img class="project__image img-responsive" src="images/list.png" alt="Pygmy">
+                        <div class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/amitt001/Codebuddy" target="_blank" rel="noopener noreferrer">
+                            <img class="project__image img-responsive" src="images/codebuddy.png" alt="Pygmy">
                         </div>
                         <div class="col-md-8 col-sm-8 col-xs-12">
                             <span class="project__title">
-                                <a href="https://gitlab.com/mailman/mailman/merge_requests?scope=all&utf8=%E2%9C%93&state=all&author_username=amitt001" target="_blank" rel="noopener noreferrer">Mailman Core</a>
+                                <a href="https://github.com/amitt001/codebuddy" target="_blank" rel="noopener noreferrer">Codebuddy</a>
                             </span>
                             <span class="project__subtitle-small">
-                                GNU Mailman list.org
+                                Real time code and document editor
                             </span>
-                            <span class="project__summary">
-                                <p>Mailman is free software for managing electronic mail discussion and e-newsletter lists.<a href="https://list.org", target="_blank">list.org</a></p>
+                            <div>
+                                <a class="github-button" href="https://github.com/amitt001/codebuddy" data-icon="octicon-star" data-show-count="true" aria-label="Star amitt001/codebuddy on GitHub">Star</a>
+                                <a class="github-button" href="https://github.com/amitt001/codebuddy/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork amitt001/codebuddy on GitHub">Fork</a>
+                            </div>
+                            <span class="project__summary detail_info_about">
+                                <p>CodeBuddy is a real time code and document collaboration web app. It can be used for real-time collaboration. Live version: <a href="https://pygy.co/cC", target="_blank">Codebuddy</a>
+                                <ul>
+                                    <li>Uses sockets for real-time text streaming to two clients</li>
+                                    <li>Offers a synced codepad, text paste to share text</li>
+                                    <li>Technology used Flask for API, Fask-socketio for real-time collaboration, Javascript, Jquery, Bootstrap, CSS, HTML</li>
+                                </ul>
+                                </p>
                             </span>
                         </div>
                     </div>
+                    <!-- Third block -->
+                    <div class="row-space">&nbsp;</div>
+                    <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-12" href="https://gitlab.com/mailman/mailman/merge_requests?scope=all&utf8=%E2%9C%93&state=all&author_username=amitt001" target="_blank" rel="noopener noreferrer">
+                                <img class="project__image img-responsive" src="images/list.png" alt="Pygmy">
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <span class="project__title">
+                                    <a href="https://gitlab.com/mailman/mailman/merge_requests?scope=all&utf8=%E2%9C%93&state=all&author_username=amitt001" target="_blank" rel="noopener noreferrer">Mailman Core</a>
+                                </span>
+                                <span class="project__subtitle-small">
+                                    GNU Mailman list.org
+                                </span>
+                                <span class="project__summary detail_info_about">
+                                    <p>Mailman is free software for managing electronic mail discussion and e-newsletter lists. <a href="https://list.org", target="_blank">list.org</a>
+                                    <ul>
+                                        <li>Contributed to GNU Mailman core engine</li>
+                                    </ul>
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
 
         </div>
+        <div>
+            <h3>Skills</h3>
+            <hr>
+            <code>
+                <div>
+                    Languages:
+                    <kbd><bold></bold>Python<small> (Proficient)</small></kbd>
+                    <kbd>Go</kbd>
+                    <kbd>Scala<small>(working experience)</small></kbd>
+                    <kbd>PHP<small>(working experience)</small></kbd>
+                </div>
+                <div>
+                    Datastores:
+                    <kbd>MySQL</kbd>
+                    <kbd>Redis</kbd>
+                    <kbd>Kafka</kbd>
+                    <kbd>Elasticsearch</kbd>
+                    <kbd>Mongo</kbd>
+                    <kbd>PostgreSQL</kbd>
+                </div>
+                <div>
+                    Web Frameworks:
+                    <kbd>Flask</kbd>
+                    <kbd>Django</kbd>
+                    <kbd>Django-rest</kbd>
+                    <kbd>Pyramid</kbd>
+                </div>
+                <div>
+                    Others:
+                    <kbd>Kubernetes</kbd>
+                    <kbd>Docker</kbd>
+                    <kbd>Helm</kbd>
+                    <kbd>Docker-compose</kbd>
+                </div>
+            </code>
+        </div>
+        <div>
+            <h3>Interests</h3>
+            <hr style="margin-bottom: 2rem">
+            <div class="detail_info_about">
+            <p>Travelling, Hiking, Mountaineering, rock climbing, Running...</p>
+            <p>Technical: Containers, Distributed Systems, System Design, Web, Open Source</p>
+            </div>
+        </div>
+    </div>
 
-    <hr class="divider">
-    <div class="portfolio__content">
-        <h3>Education</h3>
-    </div>
-    <hr class="divider">
-    <div class="portfolio__content">
-        <h3>Skills</h3>
-    </div>
-    <hr class="divider">
-    <div class="portfolio__content">
-        <h3>Interests</h3>
-    </div>
-    <hr class="divider">
+    <!-- Github Star Script. Should be in head or at bottom -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 {{ end }}
 
 {{ define "footer" }}

@@ -1,0 +1,25 @@
+.sub_info_about {
+    font-style: italic;
+    font-size: medium;
+    color: #788492
+}
+
+.detail_info_about {
+    font-size: 0.8rem;
+    color: #788492
+}
+
+.subtitle {
+    font-size: 1rem;
+    /* font-family: Monaco; */
+    padding: 0 0 1rem 0;
+}
+
+
+.right{
+    float:right;
+}
+
+.left{
+    text-align:left;
+}
