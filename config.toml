@@ -14,7 +14,7 @@ paginate = 7
 
 [params]
     author = "Amit Tripathi"
-    authorimage = "/images/amittripathi.jpg"
+    authorimage = "images/amittripathi.jpg"
     themeColor = "theme-base-0g"
     dateformat = "Jan 2, 2006"
     postNavigation = true
