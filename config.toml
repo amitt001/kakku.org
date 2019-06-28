@@ -43,6 +43,12 @@ paginate = 7
     weight = 300
     url = "/about"
 
+[[menu.main]]
+    name = "Notes"
+    weight = 200
+    identifier = "notes"
+    url = "/notes/
+
 [params.social]
     github = "amitt001"
 	twitter = "amitt019"
