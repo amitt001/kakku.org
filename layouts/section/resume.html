@@ -1,0 +1,219 @@
+{{ define "header" }}
+  {{ partial "header.html" . }}
+{{ end }}
+
+{{ define "content" }}
+
+<link rel="stylesheet" href="../css/custom.css">
+    <div style="margin-bottom: 1rem">
+        <span class="item__title--big">Amit Tripathi</span>
+    </div>
+
+    <div class="about-custom">
+        <div id="overview">
+            <span class="about-title">OVERVIEW</span>
+            <hr>
+            <ul class="detail_info">
+                <li>3+ years of experience working on real-world software with multiple tech stacks.</li>
+                <li>Contributed to multiple open-source projects</li>
+                <li>Used my deep understanding of backed systems to ship softwares</li>
+            </ul>
+        </div>
+        <div id="experience">
+            <span class="about-title">EXPERIENCE</span>
+            <hr>
+            <div>
+                <div>
+                    <span class="left subtitle">Software Engineer III</span>
+                    <span class="right sub_info_about">Apr, 2018 - Present</span>
+                    <div class="about-org">Takealot, <span class="sub_info_about">Cape Town(SA)</span></div>
+                </div>
+                <ul class="detail_info">
+                    <li>Design & rewrote major portion of all 3rd party interaction for the warehouse team</li>
+                    <li>This remodelling of 3rd party interaction using distributed system model with Kafka consumer/producer & web services made the system fast & reliable</li>
+                    <li><u>Site Reliability Engineer</u>(Feb-Present)</li>
+                    <ul>
+                        <li>Worked on various part of Google cloud migration from the self-managed kubernetes cluster</li>
+                        <li>Worked an async Vault credential management client to move plan text passwords to Vault.</li>
+                        <li>Worked on migrating in-house Elasticsearch data to Google cloud</li>
+                    </ul>
+                </ul>
+            </div>
+            <hr width="10%" style="border-top: dashed 1px #300030;">
+            <div>
+                <div>
+                    <span class="left subtitle">Software Engineer</span>
+                    <span class="right sub_info_about">Feb, 2017 - Apr, 2018</span>
+                    <div class="about-org">Wingify, <span class="sub_info_about">Delhi(IN)</span></div>
+                </div>
+                <ul class="detail_info">
+                    <li>Created a micro-service to store customer action logs. Ported past data to Elasticsearch. Technology: Elasticsearch, Python, uwsgi</li>
+                    <li>Created a cron management framework that improved cron scheduling and management.</li>
+                    <li>Worked on the data consumers for consuming and processing the data from Kafka queues.</li>
+                    <li>Created payment gateway monitoring setup using stated, grafana.</li>
+                    <li>Worked on the Wingify’s product VWO and pricing platform backend.</li>
+                </ul>
+            </div>
+            <hr width="10%" style="border-top: dashed 1px #300030;">
+            <div>
+                <div>
+                </div>
+                <div>
+                    <span class="left subtitle">Software Engineer<span class="sub_info_about">(Internship and full time)</span></span>
+                    <span class="right sub_info_about">Feb, 2016 - Jan, 2017</span>
+                    <div class="about-org">Innovaccer</div>
+                </div>
+                    <ul class="detail_info">
+                        <li>Developed web app for remote R code execution. This product allows asynchronous code execution of R code.</li>
+                        <li>Worked on web backend of Data Quality Tool. Which helped analyse and clean millions of rows of data. Used HDFS as data storage backend.</li>
+                        <li>Developed REST API using Python Django framework and Scala Play framework.</li>
+                        <li>Automated website crawling and document parsing.</li>
+                    </ul>
+            </div>
+        </div>
+        <div id="projects">
+            <span class="about-title">PROJECTS</span>
+            <hr style="margin-bottom: 2rem">
+            <!-- First Block -->
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <a href="https://github.com/amitt001/pygmy" target="_blank" rel="noopener noreferrer">
+                        <img class="project__image img-responsive" src="../images/pygmy.png" alt="Pygmy">
+                    </a>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <span class="project__title-custom">
+                        <a href="https://github.com/amitt001/pygmy" target="_blank" rel="noopener noreferrer">Pygmy</a>
+                    </span>
+                    <div class="project__subtitle-custom">
+                        Open-source URL shortener with link analytics & user dashboard
+                    </div>
+                    <div>
+                        <a class="github-button" href="https://github.com/amitt001/pygmy" data-icon="octicon-star" data-show-count="true" aria-label="Star amitt001/pygmy on GitHub">Star</a>
+                        <a class="github-button" href="https://github.com/amitt001/pygmy/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork amitt001/pygmy on GitHub">Fork</a>
+                    </div>
+                    <span class="detail_info">
+                        <p>Authored a famous open-source URL shortener web app <a href="https://pygy.co/pygy" target="_blank">pygy.co</a>
+                        <ul>
+                            <li>URL shortener with custom links, time-based expiry and secret links</li>
+                            <li>Link analytics(by adding + to URL) like <u>country</u>, referrer and <u>datewise clicks</u></li>
+                            <li>User <u>dashboard</u>. User access through JWT token based authentication</li>
+                            <li>Supports MySQL, PostgreSQL and SQLite databases</li>
+                            <li><u>Docker</u> and <u>docker-compose</u> support</li>
+                            <li>Used Django for UI rendering, Flask for REST API on top of the core module, SQLAlchemy as ORM</li>
+                        </ul>
+                        </p>
+                    </span>
+                </div>
+            </div>
+            <div class="row-space">&nbsp;</div>
+            <!-- Second Block -->
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <a href="https://github.com/amitt001/Codebuddy" target="_blank" rel="noopener noreferrer">
+                        <img class="project__image img-responsive" src="../images/codebuddy.png" alt="Pygmy">
+                    </a>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <span class="project__title-custom">
+                        <a href="https://github.com/amitt001/codebuddy" target="_blank" rel="noopener noreferrer">Codebuddy</a>
+                    </span>
+                    <div class="project__subtitle-custom">
+                        Real time code and document editor
+                    </div>
+                    <div>
+                        <a class="github-button" href="https://github.com/amitt001/codebuddy" data-icon="octicon-star" data-show-count="true" aria-label="Star amitt001/codebuddy on GitHub">Star</a>
+                        <a class="github-button" href="https://github.com/amitt001/codebuddy/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork amitt001/codebuddy on GitHub">Fork</a>
+                    </div>
+                    <span class="detail_info">
+                        <p>CodeBuddy is a real time code and document collaboration web app. It can be used for real-time collaboration. Live version: <a href="https://pygy.co/cC", target="_blank">Codebuddy</a>
+                        <ul>
+                            <li>Uses sockets for real-time text streaming to two clients</li>
+                            <li>Offers a synced codepad, text paste to share text</li>
+                            <li>Technology used Flask for API, Fask-socketio for real-time collaboration, Javascript, Jquery, Bootstrap, CSS, HTML</li>
+                        </ul>
+                        </p>
+                    </span>
+                </div>
+            </div>
+            <div class="row-space">&nbsp;</div>
+            <!-- Third block -->
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <a  href="https://gitlab.com/mailman/mailman/merge_requests?scope=all&utf8=%E2%9C%93&state=all&author_username=amitt001" target="_blank" rel="noopener noreferrer">
+                        <img class="project__image img-responsive" src="../images/list.png" alt="Pygmy">
+                    </a>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <span class="project__title-custom">
+                        <a href="https://gitlab.com/mailman/mailman/merge_requests?scope=all&utf8=%E2%9C%93&state=all&author_username=amitt001" target="_blank" rel="noopener noreferrer">Mailman Core</a>
+                    </span>
+                    <div class="project__subtitle-custom">
+                        GNU Mailman list.org
+                    </div>
+                    <span class="project__summary detail_info">
+                        <p>Contributed patches to GNU Mailman core engine. Mailman is free software for managing electronic mail discussion and e-newsletter lists. <a href="https://list.org", target="_blank">list.org</a>
+                        </p>
+                    </span>
+                </div>
+            </div>
+            <div class="row-space">&nbsp;</div>
+        </div>
+        <div id="skills">
+            <span class="about-title">SKILLS</span>
+            <hr>
+            <div>
+                <div>
+                    Languages:
+                    <kbd><bold></bold>Python<small> (Proficient)</small></kbd>
+                    <kbd>Go</kbd>
+                    <kbd>Scala<small>(working experience)</small></kbd>
+                    <kbd>PHP<small>(working experience)</small></kbd>
+                </div>
+                <div>
+                    Datastores:
+                    <kbd>MySQL</kbd>
+                    <kbd>Redis</kbd>
+                    <kbd>Kafka</kbd>
+                    <kbd>Elasticsearch</kbd>
+                    <kbd>Mongo</kbd>
+                    <kbd>PostgreSQL</kbd>
+                </div>
+                <div>
+                    Web Frameworks:
+                    <kbd>Flask</kbd>
+                    <kbd>Django</kbd>
+                    <kbd>Django-rest</kbd>
+                    <kbd>Pyramid</kbd>
+                </div>
+                <div>
+                    Others:
+                    <kbd>Kubernetes</kbd>
+                    <kbd>Docker</kbd>
+                    <kbd>Helm</kbd>
+                    <kbd>Docker-compose</kbd>
+                </div>
+            </div>
+        </div>
+        <div class="row-space">&nbsp;</div>
+        <div id="interests">
+            <span class="about-title">INTERESTS</span>
+            <hr>
+            <div class="detail_info">
+            <p>Travelling, Hiking, Mountaineering, rock climbing, Running...</p>
+            <p>Technical: Containers, Distributed Systems, System Design, Web, Open Source</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Github Star Script. Should be in head or at bottom -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+{{ end }}
+
+{{ define "footer" }}
+  {{ if .Site.GoogleAnalytics }}
+    <!-- Google Analytics -->
+    {{ template "_internal/google_analytics_async.html" . }}
+  {{ end }}
+  {{ partial "footer/font-awesome-js.html" . }}
+{{ end }}

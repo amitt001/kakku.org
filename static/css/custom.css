@@ -1,20 +1,35 @@
 .sub_info_about {
     font-style: italic;
-    font-size: medium;
+    font-size: 0.6rem;
     color: #788492
 }
 
+.about-custom {
+    font-family: Calibri, 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
+}
+
+.about-custom li {
+    line-height: 140%;
+}
+
+.about-title {
+    color: #788492;
+}
+
+.detail_info {
+    font-size: 0.7rem;
+    color: #000000;
+}
+
 .detail_info_about {
-    font-size: 0.8rem;
-    color: #788492
+    font-size: 0.9rem;
+    color: #000000;
 }
 
 .subtitle {
     font-size: 1rem;
-    /* font-family: Monaco; */
     padding: 0 0 1rem 0;
 }
-
 
 .right{
     float:right;
@@ -22,4 +37,17 @@
 
 .left{
     text-align:left;
+}
+
+.about-org {
+    font-size: 0.9rem;
+}
+
+.project__title-custom a {
+    font-size: 1.3rem;
+    color: black !important;
+}
+
+.project__subtitle-custom {
+    font-size: 0.9rem;
 }

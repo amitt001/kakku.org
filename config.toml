@@ -15,14 +15,16 @@ paginate = 7
 [params]
     author = "Amit Tripathi"
     authorimage = "images/amittripathi.jpg"
-    themeColor = "theme-base-0g"
+    themeColor = "theme-base-01"
+    layoutReverse = false
+    relatedPosts = false
     dateformat = "Jan 2, 2006"
     postNavigation = true
     copyright = "Amit"
-    showBuiltWith = false
-    mainSections = ["post"]
+    showBuiltWith = true
+    mainSections = ["posts", "notes"]
     highlightjs = true
-    highlightjsstyle="dracula"
+    highlightjsstyle = "obsidian"
 
 [permalinks]
     posts = "/:year/:month/:slug/"
@@ -32,16 +34,16 @@ paginate = 7
     keywords = "blog,amitt001,python,software,engineer,golang,programming,travel"
 
 [[menu.main]]
+    name = "Home"
+    identifier = "home"
+    weight = 50
+    url = "/"
+
+[[menu.main]]
     name = "Posts"
     weight = 100
     identifier = "posts"
     url = "/posts/"
-
-[[menu.main]]
-    name = "Notes"
-    weight = 200
-    identifier = "notes"
-    url = "/notes/"
 
 [[menu.main]]
     name = "About"
