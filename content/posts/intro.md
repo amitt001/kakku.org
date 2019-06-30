@@ -1,7 +1,6 @@
 ---
 title: "Intro"
 date: 2019-06-30T15:03:48+02:00
-draft: true
 description: "First post"
 ---
 
@@ -11,7 +10,7 @@ I got a 5 word domain name in 2019!
 
 > Kakku (火9) is a Japanese abbreviation for Kayō Ku-ji (火曜9時), meaning Tuesday at 9PM
 
-What makes this domain special for me is that "kaku" is my nickname.
+What makes this domain special for me is that "kak(k)u" happens to be my nickname also.
 
 In past, I have tried to blog on different platforms under various domain names. Finally I have purchased this domain kakku.org and created this blog on hugo platform. I intend to keep this domain and this blog going forward.
 
