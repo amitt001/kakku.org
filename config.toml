@@ -1,4 +1,4 @@
-baseURL = "https://kakku.org"
+baseURL = "https://kakku.org/"
 languageCode = "en"
 title = "Amit Tripathi"
 theme = "hyde-hyde"
