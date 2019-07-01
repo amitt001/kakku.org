@@ -1,6 +1,6 @@
 .sub_info_about {
     font-style: italic;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     color: #788492
 }
 
@@ -10,6 +10,10 @@
 
 .about-custom li {
     line-height: 140%;
+}
+
+.about-custom p {
+    line-height: 150%;
 }
 
 .about-title {
@@ -50,4 +54,10 @@
 
 .project__subtitle-custom {
     font-size: 0.9rem;
+}
+
+.education_info_about {
+    font-style: italic;
+    font-size: 80%;
+    color: #788492
 }

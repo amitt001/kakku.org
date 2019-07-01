@@ -3,10 +3,17 @@
 {{ end }}
 
 {{ define "content" }}
-
 <link rel="stylesheet" href="/css/custom.css">
+<style>
+    div.sidebar {
+        display: none;
+    }
+</style>
+
+<div id="resume">
     <div style="margin-bottom: 1rem">
         <span class="item__title--big">Amit Tripathi</span>
+        <span class="sub_info_about">+27-0724172904 | mail2amit19@gmail.com | <a href="https://kakku.org/">kakku.org</a></span>
     </div>
 
     <div class="about-custom">
@@ -15,8 +22,8 @@
             <hr>
             <ul class="detail_info">
                 <li>3+ years of experience working on real-world software with multiple tech stacks.</li>
-                <li>Contributed to multiple open-source projects</li>
-                <li>Used my deep understanding of backed systems to ship softwares</li>
+                <li>I have a very good understanding of systems, datastores, REST APIs, Kubernetes.</li>
+                <li>Contributed to multiple open-source projects.</li>
             </ul>
         </div>
         <div id="experience">
@@ -29,13 +36,13 @@
                     <div class="about-org">Takealot, <span class="sub_info_about">Cape Town(SA)</span></div>
                 </div>
                 <ul class="detail_info">
-                    <li>Design & rewrote major portion of all 3rd party interaction for the warehouse team</li>
-                    <li>This remodelling of 3rd party interaction using distributed system model with Kafka consumer/producer & web services made the system fast & reliable</li>
+                    <li>Designed & rewrote a major portion of all 3rd party interaction for the warehouse team.</li>
+                    <li>Remodeled the 3rd party interaction using a distributed system model with Kafka consumer/producer & web services, this made the system fast & reliable.</li>
                     <li><u>Site Reliability Engineer</u>(Feb-Present)</li>
                     <ul>
-                        <li>Worked on various part of Google cloud migration from the self-managed kubernetes cluster</li>
-                        <li>Worked an async Vault credential management client to move plan text passwords to Vault.</li>
-                        <li>Worked on migrating in-house Elasticsearch data to Google cloud</li>
+                        <li>Wrote an async "Vault" credential management client to move all plain text passwords to Vault.</li>
+                        <li>Worked on migrating in-house Elasticsearch data to Google cloud.</li>
+                        <li>Worked on various parts of Google cloud migration from the self-managed Kubernetes cluster.</li>
                     </ul>
                 </ul>
             </div>
@@ -47,11 +54,10 @@
                     <div class="about-org">Wingify, <span class="sub_info_about">Delhi(IN)</span></div>
                 </div>
                 <ul class="detail_info">
-                    <li>Created a micro-service to store customer action logs. Ported past data to Elasticsearch. Technology: Elasticsearch, Python, uwsgi</li>
-                    <li>Created a cron management framework that improved cron scheduling and management.</li>
-                    <li>Worked on the data consumers for consuming and processing the data from Kafka queues.</li>
-                    <li>Created payment gateway monitoring setup using stated, grafana.</li>
-                    <li>Worked on the Wingify’s product VWO and pricing platform backend.</li>
+                    <li>Created a micro-service to store streaming customer actions.</li>
+                    <li>Wrote a cron management framework that made the cron scheduling and management easier.</li>
+                    <li>Created a payment gateway monitoring setup using stated, grafana.</li>
+                    <li>Worked on various part of the backend of Wingify’s product "VWO" and the pricing platform.</li>
                 </ul>
             </div>
             <hr width="10%" style="border-top: dashed 1px #300030;">
@@ -63,13 +69,34 @@
                     <span class="right sub_info_about">Feb, 2016 - Jan, 2017</span>
                     <div class="about-org">Innovaccer</div>
                 </div>
-                    <ul class="detail_info">
-                        <li>Developed web app for remote R code execution. This product allows asynchronous code execution of R code.</li>
-                        <li>Worked on web backend of Data Quality Tool. Which helped analyse and clean millions of rows of data. Used HDFS as data storage backend.</li>
-                        <li>Developed REST API using Python Django framework and Scala Play framework.</li>
-                        <li>Automated website crawling and document parsing.</li>
-                    </ul>
+                <ul class="detail_info">
+                    <li>Developed a web app for remote R code execution. This product allows asynchronous code execution of R code.</li>
+                    <li>Worked on web backend of Data Quality Tool. Which helped analyse and clean millions of rows of data. Used HDFS as the data storage backend.</li>
+                    <li>Developed REST APIs using Python Django framework and Scala Play framework.</li>
+                    <li>Automated website crawling and document parsing.</li>
+                </ul>
             </div>
+            <hr width="10%" style="border-top: dashed 1px #300030;">
+            <div>
+                <div>
+                </div>
+                <div>
+                    <span class="left subtitle">Software Engineer, Intern</span>
+                    <span class="right sub_info_about">Aug, 2015 - Oct, 2015</span>
+                    <div class="about-org">Claymotion</div>
+                </div>
+                <ul class="detail_info">
+                    <li>Collected ten thousand positive and negative reviews <a href="https://github.com/amitt001/Android-App-Reviews-Dataset" target="_blank">training and testing dataset</a> from the top 100 android app.</li>
+                    <li>Created the module using Python's NLTK library to predict user opinion sentiment with ~75% accuracy.</li>
+                    <li>Developed a REST API on this module to show apps performance, using reviews, week-over-week.</li>
+                </ul>
+            </div>
+        </div>
+        <div id="education">
+            <span class="about-title">EDUCATION</span>
+            <hr>
+            <bold>Bachelor of Technology - <span class="education_info_about">Information Technology 2012 - 2016</span></bold>
+            <p style="margin-block-start: 0em; margin-block-end: 1em; font-size: 80%"><a href="http://www.jiit.ac.in/" rel="nofollow" target="_blank">Jaypee Institute of Information Technology</a>, Noida, India</p>
         </div>
         <div id="projects">
             <span class="about-title">PROJECTS</span>
@@ -78,7 +105,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <a href="https://github.com/amitt001/pygmy" target="_blank" rel="noopener noreferrer">
-                        <img class="project__image img-responsive" src="../images/pygmy.png" alt="Pygmy">
+                        <img class="project__image img-responsive" src="/images/pygmy.png" alt="Pygmy">
                     </a>
                 </div>
                 <div class="col-md-8 col-sm-8 col-xs-12">
@@ -111,7 +138,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <a href="https://github.com/amitt001/Codebuddy" target="_blank" rel="noopener noreferrer">
-                        <img class="project__image img-responsive" src="../images/codebuddy.png" alt="Pygmy">
+                        <img class="project__image img-responsive" src="/images/codebuddy.png" alt="Pygmy">
                     </a>
                 </div>
                 <div class="col-md-8 col-sm-8 col-xs-12">
@@ -138,10 +165,10 @@
             </div>
             <div class="row-space">&nbsp;</div>
             <!-- Third block -->
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-4 col-sm-4 col-xs-12">
-                    <a  href="https://gitlab.com/mailman/mailman/merge_requests?scope=all&utf8=%E2%9C%93&state=all&author_username=amitt001" target="_blank" rel="noopener noreferrer">
-                        <img class="project__image img-responsive" src="../images/list.png" alt="Pygmy">
+                    <a href="https://gitlab.com/mailman/mailman/merge_requests?scope=all&utf8=%E2%9C%93&state=all&author_username=amitt001" target="_blank" rel="noopener noreferrer">
+                        <img class="project__image img-responsive" src="/images/list.png" alt="Pygmy">
                     </a>
                 </div>
                 <div class="col-md-8 col-sm-8 col-xs-12">
@@ -157,15 +184,29 @@
                     </span>
                 </div>
             </div>
+            <div class="row-space">&nbsp;</div> -->
+            <!-- Fourth block -->
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <img class="project__image img-responsive" src="/images/blank.png" alt="Pygmy">
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <span class="project__title-custom" style="color: black; font-size: 1.3rem">Music Recommendation App</span>
+                    <div class="project__subtitle-custom">An Android music player app with personalised music recommendation</div>
+                    <span class="project__summary detail_info">
+                        <p>Music app with personalised music recommendation for the users. Collaborative item-based & user-based music recommendation. Technology: Java, Python, MongoDB, Framework: Flask, XML.d</p>
+                    </span>
+                </div>
+            </div>
             <div class="row-space">&nbsp;</div>
         </div>
-        <div id="skills">
+        <div id="skills" style="margin-bottom: 2%;">
             <span class="about-title">SKILLS</span>
             <hr>
             <div>
                 <div>
                     Languages:
-                    <kbd><bold></bold>Python<small> (Proficient)</small></kbd>
+                    <kbd>Python</kbd>
                     <kbd>Go</kbd>
                     <kbd>Scala<small>(working experience)</small></kbd>
                     <kbd>PHP<small>(working experience)</small></kbd>
@@ -195,19 +236,45 @@
                 </div>
             </div>
         </div>
-        <div class="row-space">&nbsp;</div>
+
+        <div id="interests">
+            <span class="about-title">OPEN SOURCE</span>
+            <hr>
+            <ul class="detail_info">
+                <li>Contributed to py-evm(Python Ethereum Implementation). Added REPL support. <a href="https://github.com/ethereum/py-evm/pull/346" target="_blank" rel="noopener noreferrer">Pull Request</a></a></li>
+                <li>Contributed patches to GNU Mailman. Fixed issues in mailman core engine. <a href="https://gitlab.com/mailman/mailman/merge_requests?scope=all&utf8=%E2%9C%93&state=all&author_username=amitt001" target="_blank" rel="noopener noreferrer">Pull requests</a></li>
+            </ul>
+        </div>
+        <div id="achievements">
+            <span class="about-title">ACHIEVEMENTS</span>
+            <hr>
+            <ul class="detail_info">
+                <li>StackOverflow amongst top 9% overall, Top 10% for Python. <a href="https://bit.ly/2cLulCF" target="_blank">SO Profile</a>, <a href="https://pygy.co/DevStory">So Devloper story</a></a></li>
+                <li>Hackerearth 95% Python competitive percentile <a href="https://www.hackerearth.com/@amitt001" target="_blank" rel="noopener noreferrer">Profile</a></li>
+            </ul>
+        </div>
         <div id="interests">
             <span class="about-title">INTERESTS</span>
             <hr>
             <div class="detail_info">
-            <p>Travelling, Hiking, Mountaineering, rock climbing, Running...</p>
-            <p>Technical: Containers, Distributed Systems, System Design, Web, Open Source</p>
+            <p>Travelling, Hiking, Mountaineering, rock climbing and Running</p>
+            <p>Technical: Distributed Systems, Containers, System Design, Web, Open Source</p>
+            </div>
+        </div>
+        <div id="links">
+            <span class="about-title">LINKS</span>
+            <hr>
+            <div class="detail_info">
+                <p>Github: <a href="https://github.com/amitt001" target="_blank">github.com/amitt001</a></p>
+                <p>Linkedin: <a href="https://www.linkedin.com/in/amit-tripathi19/" target="_blank">linkedin.com/in/amit-tripathi19</a></p>
+                <p>Blog: <a href="https://kakku.org/posts/" target="_blank">kakku.org/posts</a></p>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Github Star Script. Should be in head or at bottom -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- Github Star Script. Should be in head or at bottom -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 {{ end }}
 
 {{ define "footer" }}
