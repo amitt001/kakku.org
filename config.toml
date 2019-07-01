@@ -27,7 +27,7 @@ paginate = 7
     highlightjsstyle = "obsidian"
 
 [permalinks]
-    posts = "/:year/:month/:slug/"
+    posts = "/:slug/"
 
 [params.meta]
     description = "Amit Tripathi's blog :: technology, thoughts, opinions, travel"
