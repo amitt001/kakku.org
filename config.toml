@@ -4,7 +4,7 @@ title = "Amit Tripathi"
 theme = "hyde-hyde"
 author = "Amit Tripathi"
 
-# googleAnalytics = ""
+googleAnalytics = "UA-143063797-1"
 disqusShortname = "amitt001"
 enableRobotsTXT = true
 enableEmoji = true
