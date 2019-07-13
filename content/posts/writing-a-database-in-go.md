@@ -68,4 +68,4 @@ Next, I plan to implement the following features:
 - Separate client and server: to support multi-client and one datastore
 - Write-ahead log: to make DB fault-tolerant against power loss or crashes.
 
-*I am enjoying writing the code and learning a lot of new things. For implementing each part I have to learn both the language and concepts behind the DB component. I have also decided to blog as I go to log my learnings.*
+*I have decided to blog as I go to log my learnings. I am enjoying writing the code and learning a lot of new things. For implementing each part I have to learn both the language and concepts behind the DB component.*
