@@ -13,6 +13,11 @@ tags: [
 # ]
 ---
 
+<img style="border-radius:0px;height:440px;width:100%;" src="https://instagram.fcpt7-1.fna.fbcdn.net/vp/fd2cc646f3f39f808dcd53c24e28031e/5DEEAE91/t51.2885-15/e35/46228023_318887132168061_95887248700416063_n.jpg?_nc_ht=instagram.fcpt7-1.fna.fbcdn.net">
+<center>
+<a href="https://www.instagram.com/p/BrQX5EMn6le/" rel="nofollow" style="color:#757575;font-size:80%;">Instagram</a>
+</center>
+
 As part of <a href="https://en.wikipedia.org/wiki/Learning-by-doing" rel="nofollow">learning by doing</a>, I am trying to implement a simple database in Go. I got this project idea from <a href="http://nikhilism.com/post/2016/writing-simple-database-in-rust-part-1/" rel="nofollow">Nikhil's blog</a> about implementing a DB in Rust. The basic concept for implementation is based on [A Simple and Efficient Implementation for Small Databases](http://birrell.org/andrew/papers/024-DatabasesPaper-SOSP.pdf) paper. The paper describes the theoretical details of implementing a simple but fully functional DB.
 
 Implementing a database as a side project looked fascinating to me as, till now, I have majorly worked with web technologies. Writing a DB will also expose me to a lot of new systems concepts and logic behind writing a reliable(hopefully distributed) system. It's also a good fit for using Go.
@@ -68,4 +73,7 @@ Next, I plan to implement the following features:
 - Separate client and server: to support multi-client and one datastore
 - Write-ahead log: to make DB fault-tolerant against power loss or crashes.
 
-*I have decided to blog as I go to log my learnings. I am enjoying writing the code and learning a lot of new things. For implementing each part I have to learn both the language and concepts behind the DB component.*
+
+<small>
+*I have decided to blog as I go to log my learnings. I am enjoying writing the code and learning a lot of new things. For implementing each part I am learning both the language and the underlying concept behind the DB component. Fun!*
+</small>
