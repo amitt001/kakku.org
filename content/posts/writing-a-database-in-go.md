@@ -1,16 +1,18 @@
 ---
 title: "Writing A Simple Database"
 date: 2019-07-12T19:58:53+02:00
-tags: [
-    "Code",
-    "go",
-    "database"
-]
-# categories: [
-#     "Code",
-#     "go",
-#     "Databases"
-# ]
+description: "Writing a simple database in Go: The beginning"
+tags:
+    - Code
+    - go
+    - database
+categories:
+    - Dev
+images:
+    - https://www.instagram.com/p/BrQX5EMn6le/
+    - /images/posts/moodb_initial.png
+keywords: "Go, Golang, Database, Databases"
+summary: "I this post I am introducing a simple database written in Go. This is part 1 of multi-part posts about it."
 ---
 
 <img style="border-radius:0px;height:440px;width:100%;" src="https://instagram.fcpt7-1.fna.fbcdn.net/vp/fd2cc646f3f39f808dcd53c24e28031e/5DEEAE91/t51.2885-15/e35/46228023_318887132168061_95887248700416063_n.jpg?_nc_ht=instagram.fcpt7-1.fna.fbcdn.net">
