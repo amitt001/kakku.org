@@ -139,4 +139,4 @@ Much better! 5x speedup.
 
 <a href="https://gist.github.com/amitt001/865c87ff632650639d1fe7c5dc9aaf39" rel="nofollow">Source code to benchmark this</a>. This is not a bad performance. gRPC is also impressive here and easily handling ~20k requests/second. One more thing to note here is direct database performance goes down by a few ms. The reason is Goroutines context switching overhead. As the database has locks and at any given time only one process can update it. So it don't get a speed bump like the HTTP client.
 
-*That's it for now. In the next post, I will talk about WAL implementation and again benchmark performance.*
+*That's it for now. In the next post, I will talk about WAL implementation and the benchmark results with it.*
