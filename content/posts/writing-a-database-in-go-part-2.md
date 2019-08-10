@@ -29,15 +29,15 @@ One of the must-have feature of any frequently accessed database in today's time
 
 In-memory DBs use main memory for storage, which allows for fast access of data without the overhead of time spent in seeking and accessing the data on disk but at the cost of data loss in case of power failure or some other crash.  Also, there is only a limited amount of memory(a fraction of disk size) available on a system.
 
-Relational and non-relational DBs use disks for storing the data. But indices and any frequently accessed data is stored in main memory for fast access. On-disk data makes the data persistent and has a virtually unlimited amount of storage available but at the cost of much slower access time.
+Majority of relational and non-relational DBs use disks for storing the data. But indices and any frequently accessed data is stored in main memory for fast access. On-disk storage makes the data persistent and has a virtually unlimited amount of storage available but at the cost of much slower access time.
 
-Let's take an example of two famous database's, MySQL and Redis storage strategy. Both store data but have completely different applications and are used for very different kind of access patterns.
+Let's take an example of two famous database's, MySQL and Redis storage strategy before coming to the performance. Both store data but have completely different applications and are used for very different kind of access patterns.
 
-**Mysql**: stores data on the disk in flat files. All the data is stored in flat files(under `/var/lib/mysql/` by default). On-disk data is the source of truth and in case of a failure, DB recovers successfully with the latest committed data. It offers a very strong consistency guarantee. But MySQL also main memory. It caches data in main memory for fast random data access. It uses linked lists and LRU caching strategy for caching and invalidating the data. It uses a data structure called [B-Tree](https://en.wikipedia.org/wiki/B-tree)(or B+tree or hashmap) for keeping a memory map of indexed keys that point to actual data on disk.
+**Mysql**: stores data on the disk in flat files. All the data is stored in flat files(under `/var/lib/mysql/` by default). On-disk data is the source of truth and in case of a failure, DB recovers successfully with the latest committed data. It offers a very strong consistency guarantee. But MySQL also uses main memory. It caches data in main memory for fast random data access. It uses linked lists and LRU caching strategy for caching and invalidating the data. MySQL uses uses a data structure called [B-Tree](https://en.wikipedia.org/wiki/B-tree)(or B+tree or hashmap) for keeping a memory map of indexed keys that point to actual data on disk.
 
-**Redis**: is a fast in-memory database. Like MySQL Redis also is a hybrid version of the two classes of DBs. It uses main-memory as primary storage but it is persistent using disk storage. Redis is fast but unlike MySQL has a limitation that data can only be as large as available RAM. For persistence, it uses RDB(point-in-time snapshot) or AOF(an append write-ahead log). *We will talk more about WAL in later post*
+**Redis**: is a fast in-memory database Mostly used as a fast cache. Like MySQL Redis also is a hybrid version of the two classes of DBs. But unike MySQL, It uses main-memory as primary storage but it is persistent using disk storage. Redis is fast but has a limitation that data can only be as large as available RAM on the system. For persistence, it uses RDB(point-in-time snapshot) or AOF(an append write-ahead log) strategy.
 
-*The above information is a very oversimplified explanation of Database's and their storage. It's a huge topic which can't be covered in a blog like this.*
+*The above information is a very oversimplified explanation of Database's and their storage. It's a huge topic which can't be covered in a blog like this. Check Redis technical blogs.*
 
 ## In-Memory Key-Value Datastore
 <hr>
@@ -48,14 +48,14 @@ Coming back to the main topic of this post. How an in-memory key-value data stor
 
 **Why Use Hash Table?**
 
-Hash table is a powerful data structure that offers an amortized O(1) time access to data. This is the data structure that the key-values DB use. The reason why I am not using a more sophisticated data structure like balanced trees etc because at this point my use case is to do an exact key matching to get the value. There is no range base, pattern matching, sorted queries. So hashmap works fine in this case. Later when I implement sorting and other functionality I will look into alternative implementation.
+Hash table is a powerful data structure that offers an amortized O(1) time access to data. This is the data structure that the key-values DBs use. It offers a fast exatct key lookup. The reason why I am not using a more sophisticated data structure like balanced trees etc because at this point my use case is to do an exact key matching to get the value. There is no range base, pattern matching, sorted queries. So hashmap works fine in this case. Later when I implement sorting and other functionality I will look into alternative implementation.
 
 
 **How To Implement Key-Value Store In Go?**
 
 Go has a built-in hash table data structure implementation called `map`. It's signature is like this `map[KeyType]ValueType`.
 
-Since, the last post I have managed to add a working key-value data store which takes 3 commands, `GET`, `SET` and `DELETE`. I am using Go's map data structure. With key as string and value as a `struct`.
+Since, the last post I have managed to add a working key-value data store which takes 3 commands, `GET`, `SET` and `DELETE`. I am using Go's map data structure. With key as `string` and value as a `struct`.
 
 ```
 // KVRow individual row in db
@@ -72,7 +72,7 @@ type KVStore struct {
 }
 ```
 
-`data map[string]KVRow`: this is the main data structure that stores the key-value data. Key is stored as a string and value is a struct of key-value data. The value struct can be extended to store more info like a pointer to next key.
+`data map[string]KVRow`: this is the main data structure that stores key-value. Key is stored as a string and value is a struct of key-value data. The value struct can be extended to store more info like a pointer to next key.
 
 In relational DB terms, KVStore will be like a table and KVRow will be individual rows in the table. Using `map` offers faster ~O(1) access to data.
 
