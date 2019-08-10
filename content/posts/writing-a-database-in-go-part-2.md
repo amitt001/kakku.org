@@ -95,6 +95,7 @@ This in-memory hash table implementation provides fast access but is limited by 
 I have also divided client and server in different processes. Client and server communicate using protobuf messages. The Client interacts with the server using gRPC protocol. But that's not something I will discuss in this post. I am mentioning this because this has a network impact on the performance of the client.
 
 ## Testing Performance
+<hr>
 
 Man memory is fast disk is slow. This is a fact but how slow is a disk, 10x, 100x, 1000x? It can be as slow as ~1,00,000x! But the exact number is not important and it is always changing.
 
@@ -138,4 +139,4 @@ Much better! 5x speedup.
 
 <a href="https://gist.github.com/amitt001/865c87ff632650639d1fe7c5dc9aaf39" rel="nofollow">Source code to benchmark this</a>. This is not a bad performance. gRPC is also impressive here and easily handling ~20k requests/second. One more thing to note here is direct database performance goes down by a few ms. The reason is Goroutines context switching overhead. As the database has locks and at any given time only one process can update it. So it don't get a speed bump like the HTTP client.
 
-That's it for now. In the next post, I will talk about WAL implementation and again benchmark performance.
+*That's it for now. In the next post, I will talk about WAL implementation and again benchmark performance.*
