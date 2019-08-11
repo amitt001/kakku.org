@@ -1,5 +1,5 @@
 ---
-title: "Writing A Simple Database: Part 2(key-value)"
+title: "Writing A Simple Database: Part-2(In-memory DB)"
 date: 2019-07-18T20:45:16+02:00
 description: "Writing a simple database in Go: Story of in-memory key-value database"
 tags:
@@ -23,7 +23,7 @@ summary: "This post is about the in-memory database implementation. Part-2 of th
 
 In the [last post](/writing-a-simple-database-part-1/) I talked about some high-level ideas about writing a Database in Go. I only touched the outline of the project. In this post, I am going to focus on the first part of my implementation, the key-value in-memory database. We will see how to implement it, some performance numbers and what's next.
 
-## First Some Background(30,000-foot view)
+## First Some High-Level Background
 
 One of the must-have feature of any frequently accessed database in today's time is fast access to the stored data. Data access performance is dependent on weather data is stored in the main memory or on disk. Different databases use different strategies for storing the data based on what kind of application they cater for. Broadly speaking, there are two kinds of databases, DB's that keep all the data on transient storage(RAM) and the DB's that store data in permanent storage(hard disks) and loads it in memory. Majority of the databases, some way or other, either use a combination of both or can be configured to use both.
 
@@ -124,7 +124,7 @@ GET(client): 21.318625648s
 
 As expected, the client is very slow as compared to direct hash table use. Which makes sense as 1) client has an added delay of network calls, 2) sequential read and writes.
 
-Let's see if parallel writes will help. Using Go routing
+Let's see if parallel writes will help. Using Goroutines
 
 **100k Parallel writes:**
 
@@ -135,8 +135,8 @@ SET(client, parallel): 4.385938809s
 GET(client, parallel): 3.698692113s
 ```
 
-Much better! 5x speedup.
+Much better! 5x speedup for clients.
 
-<a href="https://gist.github.com/amitt001/865c87ff632650639d1fe7c5dc9aaf39" rel="nofollow">Source code to benchmark this</a>. This is not a bad performance. gRPC is also impressive here and easily handling ~20k requests/second. One more thing to note here is direct database performance goes down by a few ms. The reason is Goroutines context switching overhead. As the database has locks and at any given time only one process can update it. So it don't get a speed bump like the HTTP client.
+<a href="https://gist.github.com/amitt001/865c87ff632650639d1fe7c5dc9aaf39" rel="nofollow">Source code to benchmark this</a>. This is not a bad performance. gRPC is also impressive here and easily handling ~20k requests/second. One more thing to note here is direct database access performance went down by a few ms. The reason is Goroutines context-switching overhead and direct operations on hash table doesn't have the i/o like the client so groutinues doesn't actually add any benefits. As the database has locks and at any given time only one process can update it. So it don't get a speed bump like the HTTP client.
 
-*That's it for now. In the next post, I will talk about WAL implementation and the benchmark results with it.*
+*That's it for now. In the next post, I will talk about WAL implementation and again run a benchmark with WAL.*
