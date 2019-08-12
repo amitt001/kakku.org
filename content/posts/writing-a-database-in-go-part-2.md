@@ -9,6 +9,7 @@ tags:
     - go-db
 categories:
     - Dev
+slug: writing-a-simple-database-part-2-in-memory-db
 images:
     - https://www.instagram.com/p/BrQX5EMn6le/
     - /images/posts/storage_perf.png
