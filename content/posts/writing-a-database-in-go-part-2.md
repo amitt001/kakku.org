@@ -1,6 +1,6 @@
 ---
 title: "Writing A Simple Database: Part-2(In-memory DB)"
-date: 2019-07-18T20:45:16+02:00
+date: 2019-08-11T20:45:16+02:00
 description: "Writing a simple database in Go: Story of in-memory key-value database"
 tags:
     - Code
