@@ -11,16 +11,13 @@ categories:
     - Dev
 slug: writing-a-simple-database-part-2-in-memory-db
 images:
-    - https://www.instagram.com/p/BrQX5EMn6le/
+    - /images/posts/write-db-2.png
     - /images/posts/storage_perf.png
 keywords: "Go, Golang, Database, Databases"
 summary: "This post is about the in-memory database implementation. Part-2 of the series on writing a database in Golang"
 ---
 
-<img style="border-radius:0px;height:440px;width:100%;" src="https://instagram.fcpt7-1.fna.fbcdn.net/vp/cc494d09cb49305d7c532d82b596de0f/5DB2B7E9/t51.2885-15/e35/38669587_1670842359711485_6991152738553823232_n.jpg?_nc_ht=instagram.fcpt7-1.fna.fbcdn.net">
-<center>
-<a href="https://www.instagram.com/p/BmbnV8ZlvHW/" rel="nofollow" style="color:#757575;font-size:80%;">Source: Instagram</a>
-</center>
+![Write Go DB part 2](/images/posts/write-db-2.png)
 
 In the [last post](/writing-a-simple-database-part-1/) I talked about some high-level ideas about writing a Database in Go. I only touched the outline of the project. In this post, I am going to focus on the first part of my implementation, the key-value in-memory database. We will see how to implement it, some performance numbers and what's next.
 

@@ -4,10 +4,7 @@ date: 2019-06-30T15:03:48+02:00
 description: "First post"
 ---
 
-<img style="border-radius:0px;height:440px;width:100%;" src="https://instagram.fcpt7-1.fna.fbcdn.net/vp/758979b9d6d8a5273b405563673b2089/5DC92E41/t51.2885-15/e35/65304696_2420549711511037_72310637707398176_n.jpg?_nc_ht=instagram.fcpt7-1.fna.fbcdn.net">
-<center>
-<a href="https://www.instagram.com/p/BzStEWQg0wM/" rel="nofollow" style="color:#757575;font-size:80%;">Instagram</a>
-</center>
+![Intro image](/images/posts/intro.png)
 
 I got a 5-word domain name in 2019!
 
