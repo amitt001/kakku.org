@@ -22,7 +22,7 @@ paginate = 7
     postNavigation = true
     copyright = "Amit"
     showBuiltWith = true
-    mainSections = ["posts", "notes"]
+    mainSections = ["posts"]
     highlightjs = true
     highlightjsstyle = "obsidian"
 
