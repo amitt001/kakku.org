@@ -1,7 +1,7 @@
 ---
 title: "Writing A Simple Database: Part 1"
 date: 2019-07-12T19:58:53+02:00
-description: "Writing a simple database in Go: The beginning"
+description: "This post is an intro about writing database. Part-1 of the series on writing a db in Golang."
 tags:
     - Code
     - go
@@ -54,7 +54,7 @@ Some of the requirements are likely to change as I start implementing the indivi
 
 Source code: https://github.com/amitt001/moodb
 
-**DB Name**: "MooDB" or "Mdb". I got this name idea from Friend's "[Moo point](https://www.youtube.com/watch?v=62necDwQb5E)" scene :) and it sounded like a funny but mildly apt name for a DB which won't be used in production.
+**DB Name**: "MooDB" or "Mdb". I got this name idea from Friend's "[Moo point](https://www.youtube.com/watch?v=62necDwQb5E)" scene :) and it sounded like a funny but mildly apt name for a DB which won't be used for anything serious.
 
 I have already started the implementation. Till now I have a working command line with an in-memory key-value store. It supports 4 operations: `GET, SET, UPDATE, DELETE`.
 

@@ -1,7 +1,7 @@
 ---
 title: "Writing A Simple Database: Part-2(In-memory DB)"
 date: 2019-08-11T20:45:16+02:00
-description: "Writing a simple database in Go: Story of in-memory key-value database"
+description: "In this post, I am going to focus on the first part of my implementation, the key-value in-memory database. We will see how to implement it, some performance numbers and what's next."
 tags:
     - Code
     - go
@@ -14,7 +14,7 @@ images:
     - /images/posts/write-db-2.png
     - /images/posts/storage_perf.png
 keywords: "Go, Golang, Database, Databases"
-summary: "This post is about the in-memory database implementation. Part-2 of the series on writing a database in Golang"
+summary: "In this post, I am going to focus on the first part of my implementation, the key-value in-memory database. We will see how to implement it, some performance numbers and what's next."
 ---
 
 ![Write Go DB part 2](/images/posts/write-db-2.png)
@@ -138,3 +138,5 @@ Much better! 5x speedup for clients.
 <a href="https://gist.github.com/amitt001/865c87ff632650639d1fe7c5dc9aaf39" rel="nofollow">Source code to benchmark this</a>. This is not a bad performance. gRPC is also impressive here and easily handling ~20k requests/second. One more thing to note here is direct database access performance went down by a few ms. The reason is Goroutines context-switching overhead and direct operations on the hash table don't have the i/o like the client so goroutinues don't add any benefits. As the database has locks and at any given time only one process can update it. So it doesn't get a speed bump like the HTTP client.
 
 *That's it for now. In the next post, I will talk about WAL implementation and again run a benchmark with WAL.*
+
+**Update**: *May 01st, 2022*: I ended up implementing the first version of a simple [WAL](https://github.com/amitt001/moodb/tree/master/wal) for the DB in 2020 itself but never got a chance to write a blog about it. Since it has been so long and I don't have a plan to put the effort into this project, for now, I won't be publishing a new blog regarding this until (if) I again work on it.
