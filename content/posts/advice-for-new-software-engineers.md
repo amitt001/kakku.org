@@ -13,8 +13,6 @@ keywords: "advise, new software engineers, software engineer"
 summary: "I see many new software engineers who start working at their first job and stick with it for many years even if they aren’t growing or learning there. Often a new engineer would be better off ..."
 ---
 
-> From my [post on linkedin](https://www.linkedin.com/posts/amit-tripathi19_i-was-writing-something-for-a-blog-but-sharing-activity-6924585806925893632-_8sC?utm_source=linkedin_share&utm_medium=member_desktop_web)
-
 I see many new software engineers who start working at their first job and stick with it for many years even if they aren’t growing or learning there. Often a new engineer would be better off looking for new opportunities in the initial few years of their career.
 
 When you get started at your first job, everything is new and exciting. You work hard, you learn a ton, and make some money. Soon your first anniversary at your company comes, now you have been a professional software engineer for a year and you are not just a new grad who was hired primarily based on learning potential, GPA, and Leetcode skills.
