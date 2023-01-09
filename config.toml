@@ -39,11 +39,11 @@ paginate = 7
     weight = 50
     url = "/"
 
-[[menu.main]]
-    name = "Posts"
-    weight = 100
-    identifier = "posts"
-    url = "/posts/"
+#[[menu.main]]
+#    name = "Posts"
+#    weight = 100
+#    identifier = "posts"
+#    url = "/posts/"
 
 [[menu.main]]
     name = "About"
@@ -56,7 +56,6 @@ paginate = 7
 	twitter = "amitt019"
     linkedin = "amit-tripathi19"
 	stackoverflow = "4440675"
-    instagram = "iamit19"
 
 
 # https://gohugo.io/content-management/related
